@@ -36,7 +36,7 @@ class Articles(models.Model):
     keywords = models.CharField("Keywords", max_length=50)
     tags = models.ManyToManyField(Tag, verbose_name="tag")
     list_date = models.DateTimeField(default=datetime.now, blank=True)
-    image = models.ImageField(upload_to='img', null=True)
+    image = models.ImageField(upload_to='img', null=True, blank=True)
     is_published = models.BooleanField(default=True)
 
 

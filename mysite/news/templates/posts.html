@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'index.html' %}
 
-</body>
-</html>
+{% block content %}
+        {%for post in posts%}
+            <a href="{{post.id}}"><h2>{{post.title|safe}}</h2></a>
+            <p>{{post.description|safe}}</p>
+            <p>{{post.list_date|date:"d.m.Y в H:i"}}</p>
+
+
+        {%endfor%}
+    {%include 'paginator.html'%}
+{% endblock %}
