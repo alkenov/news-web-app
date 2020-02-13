@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'welcome.apps.WelcomeConfig',
     'users.apps.UsersConfig',
     'news.apps.NewsConfig',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
