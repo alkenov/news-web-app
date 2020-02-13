@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h2>{{post.title|safe}}</h2>
+    <p>Category: {{post.category}}</p>
+    <p>Tag: {%for tag in post.tags.all%}
+                {{tag.title}}
+            {%endfor%}
+    </p>
+    <p>{{post.post|safe|linebreaks}}</p>
+    <p>{{post.list_date|date:"d.m.Y в H:i"}}</p>
+
+{% endblock %}
