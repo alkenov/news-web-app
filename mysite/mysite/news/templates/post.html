@@ -8,6 +8,17 @@
             {%endfor%}
     </p>
     <p>{{post.post|safe|linebreaks}}</p>
-    <p>{{post.list_date|date:"d.m.Y в H:i"}}</p>
+    <p>Author: {{post.user}} - {{post.list_date|date:"d.m.Y в H:i"}}</p>
+    {%for comment in comments%}
+        User: {{comment.user}} <br>
+        {{comment.text}}<br>
+        Add: {{comment.created}}<br><br>
+    {%endfor%}
 
+
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input class="submit-btn" type="submit" value="Submit">
+    </form>
 {% endblock %}

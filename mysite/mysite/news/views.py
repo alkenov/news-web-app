@@ -1,7 +1,7 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.shortcuts import render, get_object_or_404
-
-from .models import Articles
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import CommentForm
+from .models import Articles, Comments
 
 
 def index(request):
@@ -16,10 +16,21 @@ def index(request):
 
 def article(request, pk):
     post = get_object_or_404(Articles, id=pk)
-    return render(request, 'post.html', {"post": post})
+    comment = Comments.objects.filter(new=pk, moderation=True)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.new = post
+            form.save()
+            return redirect(article, pk)
+    else:
+        form = CommentForm()
+    return render(request, 'post.html', {"post": post,
+                                         "comments": comment,
+                                         "form": form})
 
 
-def search(request):
-    return render(request, 'posts.html')
 
 
