@@ -1,12 +1,17 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm
-from .models import Articles, Comments
+from .models import Articles, Comments, Tag
+
+
+class Genre:
+    def tag_search(self):
+        return Tag.objects.all()
 
 
 def index(request):
     posts = Articles.objects.order_by('-list_date').filter(is_published=True)
-    paginator = Paginator(posts, 3)
+    paginator = Paginator(posts, 2)
 
     page = request.GET.get('page')
     paged_listings = paginator.get_page(page)

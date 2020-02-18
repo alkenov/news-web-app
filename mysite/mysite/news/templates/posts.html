@@ -1,12 +1,42 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
 {% block content %}
-        {%for post in posts%}
-            <a href="{{post.id}}"><h2>{{post.title|safe}}</h2></a>
-            <p>{{post.description|safe}}</p>
-            <p>{{post.list_date|date:"d.m.Y в H:i"}}</p>
-
-
-        {%endfor%}
+    <main class="body">
+        <div class="body-content">
+            {%for post in posts%}
+                <article class="article">
+                    <div class="article-image-container">
+                        <img class="article-image" src="{{ post.image.url }}" alt="">
+                    </div>
+                    <div class="article-content">
+                        <header class="article-header">
+                            <div class="tag">
+                                <ul class="tag-list">
+                                    <li class="tag-list-item"><a href="#0">{{post.tags}}</a></li>
+                                </ul>
+                            </div>
+                            <h2 class="article-title"><a href="{{post.id}}">{{post.title|safe}}</a></h2>
+                            <div class="extra">
+                                <time class="time" datetime="{{post.list_date|date:'d-m-Y'}}" title="{{post.list_date|date:'d-m-Y в H:i'}}">
+                                    {{post.list_date|date:'d-m-Y'}}
+                                </time>
+                                <div class="author">
+                                    by {{post.user}}
+                                </div>
+                            </div>
+                        </header>
+                        <div class="article-description">
+                            <p>
+                                {{post.description|safe}}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            {%endfor%}
+        </div>
+        {%include 'side bar.html'%}
+    </main>
     {%include 'paginator.html'%}
 {% endblock %}

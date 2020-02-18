@@ -15,10 +15,14 @@
         Add: {{comment.created}}<br><br>
     {%endfor%}
 
+    {%if user.is_active%}
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input class="submit-btn" type="submit" value="Submit">
+        </form>
+    {%else%}
+        <h4>to leave a comment log in</h4>
+    {%endif%}
 
-    <form action="" method="post">
-        {%csrf_token%}
-        {{form.as_p}}
-        <input class="submit-btn" type="submit" value="Submit">
-    </form>
 {% endblock %}
