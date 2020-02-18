@@ -2,13 +2,17 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm
 from .models import Articles, Comments, Tag
+from django.views.decorators.cache import cache_page
+
+
+CACHE_TTL = 60 * 15
 
 
 class Genre:
     def tag_search(self):
         return Tag.objects.all()
 
-
+@cache_page(CACHE_TTL)
 def index(request):
     posts = Articles.objects.order_by('-list_date').filter(is_published=True)
     paginator = Paginator(posts, 2)
@@ -19,6 +23,7 @@ def index(request):
     context = {'posts': paged_listings}
     return render(request, 'posts.html', context)
 
+@cache_page(CACHE_TTL)
 def article(request, pk):
     post = get_object_or_404(Articles, id=pk)
     comment = Comments.objects.filter(new=pk, moderation=True)
