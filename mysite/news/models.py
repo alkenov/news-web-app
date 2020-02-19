@@ -46,7 +46,7 @@ class Articles(models.Model):
                                   verbose_name="tag")
     list_date = models.DateTimeField(default=datetime.now,
                                      blank=True)
-    image = models.ImageField(upload_to='img',
+    image = models.ImageField(upload_to='media/img',
                               null=True,
                               blank=True)
     is_published = models.BooleanField(default=True)

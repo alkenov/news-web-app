@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from news.models import Articles
 
 
 def index(request):
     if request.method == 'GET':
-        return render(request, "index.html")
+        posts = Articles.objects.order_by('-list_date')[:1]
+        context = {'posts': posts}
+        return render(request, "index.html", context)
