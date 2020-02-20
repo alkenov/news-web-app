@@ -552,7 +552,26 @@ body {
 	width: 272px;
 }
 
+.id_text{
+	display: block;
+	box-sizing: border-box;
+	height: 200px;
+	width: 500px;
+	border-width: 0px;
+	padding-left: 20px;
+	margin-top: 40px;
+	margin-left:auto;
+	margin-right:auto;
 
+	font-family: OpenSans, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	font-style: normal;
+	color: #000000;
+	text-transform:capitalize;
+
+	background-color: #f4f7f6;
+}
 
 .submit-btn {
 
