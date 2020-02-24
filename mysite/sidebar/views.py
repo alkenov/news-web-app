@@ -7,3 +7,6 @@ def index(request):
         posts = Articles.objects.order_by('-list_date')[:3]
         context = {'posts': posts}
         return render(request, context)
+
+
+

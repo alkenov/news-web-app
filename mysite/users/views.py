@@ -5,8 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.utils import timezone
 from django.views.decorators.http import require_GET
 
-
-
+# Create your views here.
 def registration(request):
     if request.method == 'GET':
         form = RegistrationForm()
@@ -22,7 +21,7 @@ def registration(request):
             user.email_user(
                 "Email confirmation",
                 f"Please follow the <a href='{link}'>link</a>",
-                from_email='vlad_zhernosek@gmail.com'
+                from_email='admin@admin.com'
             )
             user.verification_email_sent_at = timezone.now()
             user.save()
@@ -73,7 +72,6 @@ def verify_view(request):
 def logout_view(request):
     logout(request)
     return redirect("/")
-
 
 
 
