@@ -3,8 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CommentForm
 from .models import Articles, Comments
 from django.views.decorators.cache import cache_page
-from django.views.generic import ListView
-from django.db.models import Q
+
 
 
 '''@cache_page(CACHE_TTL)'''
