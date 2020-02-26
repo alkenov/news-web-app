@@ -6,13 +6,14 @@ from django.views.decorators.cache import cache_page
 
 
 
-'''@cache_page(CACHE_TTL)'''
+
+
 CACHE_TTL = 60 * 20
 
 
 
 
-
+@cache_page(CACHE_TTL)
 def index(request):
     posts = Articles.objects.order_by('-list_date').filter(is_published=True)
     paginator = Paginator(posts, 3)
@@ -43,4 +44,15 @@ def article(request, pk):
                                          "form": form})
 
 
+
+def search(request):
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(title__icontains=query)
+
+    context = {
+            'listings': queryset_list
+        }
+
+    return render(request, 'search.html', context)
 

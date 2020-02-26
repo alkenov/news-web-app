@@ -16,9 +16,10 @@
                 </div>
             </article>
         {%endfor%}
-
-    <form class="search-form" action="">
-        <input class="field" type="search" name="" placeholder="Search..." required>
+    </section>
+    <form class="search-form" action="" method="GET">
+        <input class="field" type="text" name="q"
+               placeholder="Search..." value="{{ values.keywords }}">
         <button class="search-button" type="submit">
             <img class="src-img" src="https://netology-code.github.io/html-2-diploma/sources/images/search.svg" alt="loupe">
         </button>

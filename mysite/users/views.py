@@ -21,7 +21,7 @@ def registration(request):
             user.email_user(
                 "Email confirmation",
                 f"Please follow the <a href='{link}'>link</a>",
-                from_email='admin@admin.com'
+                from_email='vladzhernasek@gmail.com'
             )
             user.verification_email_sent_at = timezone.now()
             user.save()

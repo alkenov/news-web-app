@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'news.apps.NewsConfig',
     'django_summernote',
-    'sidebar'
 ]
 
 MIDDLEWARE = [
