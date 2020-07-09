@@ -25,6 +25,14 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('news.urls')),
     path('', include('django_summernote.urls')),
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    path('', include('sidebar.urls')),
+=======
+    path('accounts/', include('allauth.urls')),
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

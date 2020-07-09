@@ -41,9 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'welcome.apps.WelcomeConfig',
+    'django.contrib.sites',
     'users.apps.UsersConfig',
     'news.apps.NewsConfig',
     'django_summernote',
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    'sidebar'
+=======
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
@@ -72,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request'
             ],
         },
     },
@@ -92,6 +104,13 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = [
+
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -110,6 +129,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
 
 #AUTH_USER_MODEL = 'users.User'
 
@@ -156,3 +178,5 @@ CACHES = {
 
 
 SESSION_EXPIRE_SECONDS = 3600
+
+SITE_ID = 1
