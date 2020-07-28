@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14f84398-0d82-4072-a7dc-114db3d15cb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mysite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/dir_vlad/abs.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/req.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/req.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/templates/side bar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/sidebar/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/templates/confirmation_success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/welcome/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/welcome/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

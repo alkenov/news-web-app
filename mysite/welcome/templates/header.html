@@ -17,15 +17,15 @@
 								<span class="activaited-user">
 									Hello, {{ user }}!
 								</span>
-        						<a href="/logout" class="menu-link">
+        						<a href="{% url 'account_logout' %}" class="menu-link">
             						Logout
         						</a>
     						{% else %}
-        						<a href="/register" class="menu-link">
+        						<a href="{% url 'account_signup' %}" class="menu-link">
             						Register
 								</a>
 								<li class="menu-list-item">
-        							<a href="/login" class="menu-link">
+        							<a href="{% url 'account_login' %}" class="menu-link">
 										Login
         							</a>
 								</li>

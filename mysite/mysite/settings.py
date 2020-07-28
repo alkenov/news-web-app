@@ -42,19 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'welcome.apps.WelcomeConfig',
     'django.contrib.sites',
-    'users.apps.UsersConfig',
     'news.apps.NewsConfig',
     'django_summernote',
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-    'sidebar'
-=======
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 ]
 
 MIDDLEWARE = [
@@ -68,7 +61,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
-
 
 ROOT_URLCONF = 'mysite.urls'
 
